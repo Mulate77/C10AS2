@@ -14,6 +14,9 @@ class Example extends Model
     {
         return $this->belongsTo(Word::class);
     }
+    protected $guarded=[
+        'id'
+    ];
 
     public function getName()
     {

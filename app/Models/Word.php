@@ -9,7 +9,9 @@ class Word extends Model
 {
     /** @use HasFactory<\Database\Factories\WordFactory> */
     use HasFactory;
-
+    protected $guarded=[
+        'id'
+    ];
     protected $table = 'words';
     protected $fillable = ['name'];
 

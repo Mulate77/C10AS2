@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Antonym extends Model
 {
     public $fillable = ['word_id', 'antonym'];
+    protected $guarded=[
+        'id'
+    ];
 
     public function word()
     {

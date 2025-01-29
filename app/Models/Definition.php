@@ -10,6 +10,9 @@ class Definition extends Model
     /** @use HasFactory<\Database\Factories\DefinitionFactory> */
     use HasFactory;
     protected $fillable = ['word_id', 'definition', 'slug'];
+    protected $guarded=[
+        'id'
+    ];
     public static function boot()
     {
        parent::boot();
